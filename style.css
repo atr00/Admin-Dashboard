@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+:root {
+    --side-icon-size: 48px;
+}
+
+#main-title {
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    grid-template-rows: 210px 1fr;
+    width: 100vw;
+    height: 100vh;
+}
+
+#header {
+    grid-area: 1 / 2 / 2 / 3;
+    padding: 12px 48px 22px 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: inset 0px -8px 10px -5px rgba(128, 0, 128, 0.5);
+}
+
+#sidebar {
+    grid-row: 1 / 3;
+    background-color: #3b0764;
+    color: white;
+    padding: 20px;
+}
+
+#content {
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+    background-color: #eee1fc;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.dash-logo,
+.icon {
+    fill: white;
+}
+
+.icon {
+    height: 24px;
+}
+
+.header-icon {
+    height: 36px;
+    fill: #3b0764;
+}
+
+.logo-container,
+.icon-container {
+    width: 70px;
+    margin-right: 16px;
+}
+
+.icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 56px;
+    text-align: center;
+}
+
+.header-flex{
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+#search {
+    flex: 1;
+    border-radius: 24px;
+    border: 1px solid #3b0764;
+    padding: 4px 24px;
+    font-size: 1rem;
+    margin-right: 96px;
+}
+
+#search:focus {
+    outline: none;
+    box-shadow: 4px 4px 8px rgba(128, 0, 128, 0.5);
+}
+
+#avatar-header {
+    height: 56px;
+    border-radius: 32px;
+}
+
+#avatar-header-large {
+    height: 72px;
+    border-radius: 36px;
+}
+
+#header-name,
+#header-name-large {
+    color: #3b0764;
+    font-weight: 900;
+}
+
+#header-name {
+    font-size: 1.5rem;
+}
+
+#header-name-large {
+    font-size: 1.75rem;
+}
+
+.flex-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    justify-content: center;
+}
+
+.text-color {
+    color: #3b0764;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.header-btn {
+    background-color: #3b0764;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 900;
+    border-radius: 21px;
+    height: 42px;
+    width: 128px;
+    outline: none;
+    border: none;
+}
+
+.header-btn:hover {
+    box-shadow: 4px 4px 8px rgba(128, 0, 128, 0.5);
+}
+
+.spacer {
+    flex-grow: 1;
+}
