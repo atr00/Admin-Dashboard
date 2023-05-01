@@ -167,7 +167,9 @@
 }
 
 #cards-grid {
-    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 #cards-grid h2,
@@ -201,14 +203,10 @@
 #announcement-card,
 #trending-card {
     flex: 1;
-    border-radius: var(--card-border-radius);
-    background-color: var(--light-orange);
     display: flex;
     flex-direction: column;
     gap: var(--flex-gap);
     justify-content: center;
-    padding: var(--flex-gap);
-    box-shadow: 4px 4px 8px rgba(128, 0, 128, 0.5);
 }
 
 #announcement-card {
@@ -228,4 +226,39 @@ hr {
 
 .handle {
     margin-bottom: 4px;
+}
+
+#projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: var(--grid-gap);
+    grid-auto-rows: 1fr;
+    flex: 1;box-sizing: border-box;
+}
+
+#announcement-card,
+#trending-card,
+.project-card {
+    border-radius: var(--card-border-radius);
+    background-color: var(--light-orange);
+    padding: var(--flex-gap);
+    box-shadow: 4px 4px 8px rgba(128, 0, 128, 0.5);
+}
+
+.project-card {
+    min-height: 200px;
+    border-left: var(--card-border-radius) solid var(--dark-purple-transparent);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-card p {
+    color: var(--dark-purple-transparent);
+}
+
+.action-btns {
+    display: flex;
+    justify-content: flex-end;
+    gap: var(--flex-gap);
 }
